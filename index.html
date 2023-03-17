@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light!</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+</head>
+
+<script>
+
+function ledOn() {
+        firebase.database().ref("SALA").set({
+          estado: "LIGADA",
+        });
+      }
+
+      function ledOff() {
+        firebase.database().ref("SALA").set({
+          estado: "DESLIGADA",
+        });
+    }
+</script>
+
+
+<body>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"> </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"> </script>
+
+    <script>    
+        const firebaseConfig = {
+          apiKey: "AIzaSyAat66jEHTSSJwm6blMZ4kn5CdB3BWZtnw",
+          authDomain: "iottrainningproject.firebaseapp.com",
+          projectId: "iottrainningproject",
+          storageBucket: "iottrainningproject.appspot.com",
+          messagingSenderId: "608003078544",
+          appId: "1:608003078544:web:9b2afcb131ae0b9cbddb15"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+
+<main>
+    <header>
+    <img src="Assets/Group 1.png" alt="Imagem Iot" >
+    </header>
+    <div>
+    <h2>Bem vindo ao Smart Light</h2>
+    <p>Você pode ligar ou desligar as lâmpadas da sua casa através dos butões abaixo 👇👇</p>
+    </div>
+    <article>
+    <img src="Assets/Button 1.png" id="Button1" alt="Button 1" onclick="ledOff()">
+    <img src="Assets/Button 2.png" id="Button2" alt="Buttons 2" onclick="ledOn()">
+    </article>
+</main>
+<footer><p>Site criado e desenvolvido por Amâncio Fernando Chiluvane</p></footer>
+</body>
+</html>
