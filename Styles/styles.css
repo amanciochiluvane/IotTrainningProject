@@ -26,16 +26,26 @@ font-size: medium;
 div>p{
     color:white;
     text-shadow:2px 2px 2px black;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-size: small;
 }
 #Button1{
 width:30vw;
 height:150px;
+
+}
+#Button1:hover{
+    transform: translate(-10%, -10%);
+    transition-duration: 1s;
 }
 #Button2{
     width:30vw;
     height:150px;
+    
+}
+#Button2:hover{
+    transform: translate(10%, -10%);
+    transition-duration: 1s;
 }
 article{
     text-align: center;
@@ -55,6 +65,16 @@ footer>p{
     text-shadow:2px 2px 2px rgb(7, 1, 1);
     font-size: small;
     padding:10px;
+}
+a{
+    color:white;
+    text-shadow:2px 2px 2px rgb(7, 1, 1);
+    font-size: small;
+    text-decoration: none;
+
+}
+a:hover{
+    color: rgb(21, 57, 21);
 }
 @media screen and (min-width:550px) {
     header>img{
